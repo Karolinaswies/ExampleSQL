@@ -1,14 +1,16 @@
+-- Set function: count, sum and avg
+
 -- Count the products belonging to the category "Bike"
 select count(c.name) as liczba, c.name
 from SalesLT.ProductCategory c
 group by c.name
 having c.name like '%bikes%'
 
--- Display the number of women
-select sum(customerID) as Women
-from SalesLT.Customer c
-where c.Title= 'ms.'
+-- Display sum of cost products which cost is higher then 1000
+ select sum(p.standardcost) as SumStandarsCost
+ from SalesLT.Product p
+ where p.standardcost > 1000
 
 -- Select average cost of products
- select avg(standardcost) as StandarsCost
+select avg(standardcost) as StandarsCost
 from SalesLT.Product P
