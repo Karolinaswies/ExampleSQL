@@ -1,11 +1,11 @@
--- Date operation
-  select getdate() as Today, getdate()-1 as Yesterday, getdate()+1 as Tomorrow
+-- Date operation, display today, yesterday and tomorrow date
+select getdate() as Today, getdate()-1 as Yesterday, getdate()+1 as Tomorrow
 
--- Select null
+-- Select products without color
 select *
 from SalesLT.Product p
 where p.color is null
 
--- Select only Name and ListPrice
+-- Select specific columns only (Name and ListPrice)
 select p.Name, p.ListPrice
 from SalesLT.Product p 
