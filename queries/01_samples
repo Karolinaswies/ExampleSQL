@@ -1,0 +1,3 @@
+-- Date operation
+
+  select getdate() as Today, getdate()-1 as Yesterday, getdate()+1 as Tomorrow
