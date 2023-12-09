@@ -1,7 +1,7 @@
 -- Date operation, display today, yesterday and tomorrow date
 select getdate() as Today, getdate()-1 as Yesterday, getdate()+1 as Tomorrow
 
--- Select products without color
+-- Select specific columns with null value (Color)
 select *
 from SalesLT.Product p
 where p.color is null
