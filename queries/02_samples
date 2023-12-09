@@ -1,1 +1,14 @@
+-- Count the products belonging to the category "Bike"
+select count(c.name) as liczba, c.name
+from SalesLT.ProductCategory c
+group by c.name
+having c.name like '%bikes%'
 
+-- Display the number of women
+select sum(customerID) as Women
+from SalesLT.Customer c
+where c.Title= 'ms.'
+
+-- Select average cost of products
+ select avg(standardcost) as StandarsCost
+from SalesLT.Product P
