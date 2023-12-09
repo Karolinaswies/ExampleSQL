@@ -9,3 +9,9 @@ I showed how to display:
 - date
 - only selected columns
 - columns with a null value
+
+02_samples
+I showed how to display:
+- count of the products (count)
+
+- average cost of products (avg)
