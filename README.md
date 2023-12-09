@@ -10,7 +10,7 @@ I showed how to display:
 - only selected columns
 - columns with a null value
 
-02_samples
+[02_sample](queries/02_samples)
 I showed how to use set function
 - count 
 - sum
