@@ -1,4 +1,4 @@
--- Substring and convert the date 
+-- Substring and convert the date (from date '2007-06-01 00:00:00.000' to '2007')
 select p.productid, p.name, substring(convert(varchar, p.sellstartdate, 112),1,4) as year
 from SalesLT.Product p 
 where substring(convert(varchar, p.sellstartdate, 112),1,4) = 2007
