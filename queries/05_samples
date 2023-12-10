@@ -1,6 +1,20 @@
 -- Join values from different tables
+
+-- Join
 select count(h.SalesOrderid) as 'Order quantity', h.CustomerID, c.firstname, c.lastname
 from SalesLT.Customer c
-left join SalesLT.SalesOrderHeader h on c.customerid = h.customerid
+join SalesLT.SalesOrderHeader h on c.customerid = h.customerid
 group by h.customerid, c.firstname, c.lastname
 having h.customerid = 29660
+
+-- Left join
+select c.CustomerID, c.FirstName, c.LastName, a.CountryRegion
+from SalesLT.Customer c
+left join SalesLT.CustomerAddress CA on ca.CustomerID = c.CustomerID
+left join SalesLT.Address a on ca.AddressID = a.AddressID
+where c.LastName in ('smith') and a.CountryRegion in ('united states')
+
+-- Right Join
+select h.PurchaseOrderNumber, c.*
+from saleslt.Customer c
+right join SalesLT.SalesOrderHeader h on c.CustomerID = h.CustomerID
