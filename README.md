@@ -29,3 +29,7 @@ I showed how to use:
 - substring and convert
 - len
 
+[05_samples](queries/05_samples)
+I showed how to use:
+- join, left join and right join
+
