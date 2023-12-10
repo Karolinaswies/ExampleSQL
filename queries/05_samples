@@ -1,0 +1,6 @@
+-- Join values from different tables
+select count(h.SalesOrderid) as 'Order quantity', h.CustomerID, c.firstname, c.lastname
+from SalesLT.Customer c
+left join SalesLT.SalesOrderHeader h on c.customerid = h.customerid
+group by h.customerid, c.firstname, c.lastname
+having h.customerid = 29660
