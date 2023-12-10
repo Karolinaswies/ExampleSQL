@@ -1,0 +1,9 @@
+-- Substring and convert the date 
+select p.productid, p.name, substring(convert(varchar, p.sellstartdate, 112),1,4) as year
+from SalesLT.Product p 
+where substring(convert(varchar, p.sellstartdate, 112),1,4) = 2007
+
+-- Display incorrect values (Len)
+select c.phone
+from SalesLT.Customer c
+where len(c.phone) <> 12
