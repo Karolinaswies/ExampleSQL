@@ -1,4 +1,4 @@
--- Set function: count, sum and avg
+-- Set function: count, sum, avg, min, max
 
 -- Count the products belonging to the category "Bike"
 select count(c.name) as liczba, c.name
@@ -11,6 +11,17 @@ having c.name like '%bikes%'
  from SalesLT.Product p
  where p.standardcost > 1000
 
+-- Multiplication on column values (Quantity * Price)
+select d.SalesOrderID, sum(d.orderQty * d.unitprice) as 'order value'
+from SalesLT.SalesOrderDetail d
+group by d.salesorderID
+order by [order value] desc
+
 -- Select average cost of products
 select avg(standardcost) as StandarsCost
 from SalesLT.Product P
+
+-- Display Min and Max Value 
+ select min(p.listprice) as MinPrice, max(p.listprice) as MaxPrice
+ from saleslt.product p
+
