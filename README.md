@@ -13,5 +13,7 @@ I showed how to display:
 [02_sample](queries/02_samples)
 I showed how to use set function
 - count 
-- sum
-- average 
+- sum 
+- average
+- min
+- max
