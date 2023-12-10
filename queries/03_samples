@@ -2,7 +2,7 @@
 select distinct(d.SalesOrderID)
 from SalesLT.SalesOrderDetail d
 
--- Find products beginnind with the letter "S" (Like)
+-- Find products beginning with the letter "S" (Like)
 select *
 from SalesLT.Product p 
 where p.Name like 'S%'
