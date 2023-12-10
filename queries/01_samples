@@ -6,6 +6,6 @@ select *
 from SalesLT.Product p
 where p.color is null
 
--- Select specific columns only (Name and ListPrice)
+-- Select specific columns only:
 select p.Name, p.ListPrice
 from SalesLT.Product p 
