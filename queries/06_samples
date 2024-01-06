@@ -1,0 +1,12 @@
+-- Create a View "TableSize" with new table
+
+  CREATE View TableSize AS
+  select *,
+  case 
+	when p.size = 's' then '36' 
+	when p.size = 'm' then '38'
+	when p.size = 'l' then '40'
+else p.Size
+end as Size2
+  from SalesLT.Product p
+
