@@ -24,7 +24,7 @@ from SalesLT.Product p
 select replace(replace(REPLACE(p.size, 's', '36'),'m','38'),'l','40')
 from SalesLT.Product p
 
--- Replace some of the characters or term
+-- Replace some of the characters or term (another way)
 select 
 case 
 	when p.size = 's' then '36' 
