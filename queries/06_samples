@@ -1,7 +1,7 @@
 -- Create a View "TableSize" with new column
 
   CREATE View TableSize AS
-  select *,
+  select *, lower(p.color) AS small_Color,
   case 
 	when p.size = 's' then '36' 
 	when p.size = 'm' then '38'
@@ -9,4 +9,5 @@
 else p.Size
 end as Size2
   from SalesLT.Product p
+  where p.Size is not null
 
