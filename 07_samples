@@ -1,14 +1,16 @@
--- Data Cleaning 
+----- Data Cleaning 
 
 -- Select irrelevant data, we are intrested in expensive products
 select *
 from SalesLT.Product p
 where p.StandardCost > 100
 
+
 -- Remove duplicate data
 select distinct *
 from SalesLT.Product p
 where p.StandardCost > 100
+
 
 -- Fix structural errors
 -- Find unnecessary spaces at the beginning or the end 
@@ -33,3 +35,16 @@ case
 else p.Size
 end as Size
 from SalesLT.Product p
+
+
+-- Missing data
+-- Update
+update SalesLT.Product
+set size = 'Uni'
+where ProductID = 707
+
+-- Delete 
+delete from SalesLT.Product
+where ProductID = 1000
+
+
