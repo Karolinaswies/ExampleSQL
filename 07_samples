@@ -1,0 +1,35 @@
+-- Data Cleaning 
+
+-- Select irrelevant data, we are intrested in expensive products
+select *
+from SalesLT.Product p
+where p.StandardCost > 100
+
+-- Remove duplicate data
+select distinct *
+from SalesLT.Product p
+where p.StandardCost > 100
+
+-- Fix structural errors
+-- Find unnecessary spaces at the beginning or the end 
+
+select Trim(p.Size) AS Without_space
+from SalesLT.Product p
+
+-- Turn texts into  lowercase.
+select lower(p.Size) AS small
+from SalesLT.Product p
+
+-- Replace some of the characters or term
+select replace(replace(REPLACE(p.size, 's', '36'),'m','38'),'l','40')
+from SalesLT.Product p
+
+-- Replace some of the characters or term
+select 
+case 
+	when p.size = 's' then '36' 
+	when p.size = 'm' then '38'
+	when p.size = 'l' then '40'
+else p.Size
+end as Size
+from SalesLT.Product p
