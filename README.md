@@ -33,3 +33,8 @@ I showed how to use:
 I showed how to use:
 - join, left join and right join
 
+[06_samples](queries/06_samples)
+I showed how to create a view
+
+[07_samples](queries/07_samples)
+I showed how use queries to Data Cleaning 
