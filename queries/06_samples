@@ -1,4 +1,4 @@
--- Create a View "TableSize" with new table
+-- Create a View "TableSize" with new column
 
   CREATE View TableSize AS
   select *,
