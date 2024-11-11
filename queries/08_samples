@@ -1,1 +1,23 @@
+Windows functions
 
+
+1. AVG cost for each product per category
+
+SELECT 
+  p.productID,
+	p.name,
+	p.ProductCategoryID,
+	ROUND(p.standardcost,2) as Cost,
+  ROUND(AVG(p.standardcost) OVER (PARTITION BY p.productcategoryID), 2) AS avg_salary_per_category
+FROM 
+    SalesLT.product p
+
+
+2. RANK 
+The most valauable order
+
+select 
+	soh.SalesOrderID,
+	ROUND(soh.totaldue,2) as TotalDue,
+	RANK() OVER (ORDER BY soh.totaldue desc) as Rank_Order
+from SalesLT.SalesOrderHeader soh
