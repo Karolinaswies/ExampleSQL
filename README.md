@@ -39,5 +39,5 @@ I showed how to create a view
 [07_samples](queries/07_samples)
 I showed how use queries to Data Cleaning 
 
-[08_samples](queries/07_samples)
+[08_samples](queries/08_samples)
 Window functions
